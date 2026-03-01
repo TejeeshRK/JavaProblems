@@ -9,14 +9,18 @@ public class FirstDay {
 
     public static int SecondLargest(int[] nums)
     {
-        int largest = 0;
-        int secondlargest = 0;
+        int largest = nums[0];
+        int secondlargest = Integer.MIN_VALUE;
         for(int i=0; i<=nums.length-1; i++)
         {
             if(largest < nums[i])
             {
                 secondlargest = largest;
                 largest = nums[i];
+            }
+            if(nums[i] > secondlargest && nums[i] != largest)
+            {
+                secondlargest = nums[i];
             }
         }
         return secondlargest;
@@ -25,7 +29,7 @@ public class FirstDay {
     public static int EvenCount(int[] nums)
     {
         int count = 0;
-        for(int i=0; i<=nums.length-1; i++)
+        for(int i=0; i<nums.length; i++)
         {
             if(nums[i]%2==0)
             {
