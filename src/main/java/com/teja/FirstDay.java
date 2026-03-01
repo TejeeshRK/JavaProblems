@@ -5,6 +5,7 @@ public class FirstDay {
     {
         System.out.println(FirstDay.SecondLargest(new int[]{10,8,11,11,9}));
         System.out.println(FirstDay.EvenCount(new int[]{20,10,23,40,55}));
+        System.out.println(FirstDay.SmallestNumber(new int[]{1,2,3,4,5}));
     }
 
     public static int SecondLargest(int[] nums)
@@ -37,5 +38,18 @@ public class FirstDay {
             }
         }
         return count;
+    }
+
+    public static int SmallestNumber(int[] nums)
+    {
+        int smallest = nums[0];
+        for(int i=0; i<nums.length; i++)
+        {
+            if(smallest > nums[i])
+            {
+                smallest = nums[i];
+            }
+        }
+        return smallest;
     }
 }
