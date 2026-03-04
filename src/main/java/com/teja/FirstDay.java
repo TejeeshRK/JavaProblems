@@ -3,9 +3,10 @@ package com.teja;
 public class FirstDay {
     static void main()
     {
-        System.out.println(FirstDay.SecondLargest(new int[]{10,8,11,11,9}));
-        System.out.println(FirstDay.EvenCount(new int[]{20,10,23,40,55}));
-        System.out.println(FirstDay.SmallestNumber(new int[]{1,2,3,4,5}));
+        //System.out.println(FirstDay.SecondLargest(new int[]{}));
+        //System.out.println(FirstDay.EvenCount(new int[]{20,10,23,40,55}));
+        //System.out.println(FirstDay.SmallestNumber(new int[]{1,2,3,4,5}));
+        System.out.println(FirstDay.FirstNonRepeatingNumber(new int[]{1,2,1,2,5,3,3,8,9,9}));
     }
 
     public static int SecondLargest(int[] nums)
@@ -51,5 +52,25 @@ public class FirstDay {
             }
         }
         return smallest;
+    }
+
+    public static int FirstNonRepeatingNumber(int[] nums)
+    {
+        for(int i=0; i<nums.length; i++)
+        {
+            int count=0;
+            for(int j=0; j<nums.length; j++)
+            {
+                if(nums[i] == nums[j])
+                {
+                    count++;
+                }
+            }
+            if(count == 1)
+            {
+                return nums[i];
+            }
+        }
+        return -1;
     }
 }
