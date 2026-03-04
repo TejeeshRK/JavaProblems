@@ -1,7 +1,4 @@
 package com.teja;
-
-import com.sun.source.tree.WhileLoopTree;
-
 import java.awt.*;
 import java.util.Arrays;
 
